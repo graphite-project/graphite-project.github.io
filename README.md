@@ -1,4 +1,3 @@
-graphite-project.github.com
-===========================
+# Graphite-Project
 
-graphite-project.github.com content
+This website is under construction. Please check back soon for updates.
