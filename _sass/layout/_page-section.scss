@@ -1,0 +1,170 @@
+// ==========================================================================
+// PAGE SECTION
+// ==========================================================================
+
+
+
+// Page section
+// --------------------------------------------------------------------------
+
+.page-section {
+  padding: rem-calc(70 0);
+}
+
+.section-header {
+  @include roboto-condensed;
+  margin: rem-calc(0);
+  padding-bottom: rem-calc(30);
+  font-weight: 700;
+}
+
+.section-subhead {
+  @include roboto-condensed;
+  margin: rem-calc(0 0 37);
+  font-weight: 400;
+}
+
+.page-section p {
+  margin: rem-calc(0 0 20);
+  font-size: $font-size-delta;
+}
+
+.page-section p > a {
+  color: $color-curious-blue;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.page-section .hex {
+  @include roboto;
+  position: relative;
+  min-height: rem-calc(44);
+  padding: rem-calc(12 0 0 60);
+  background: url('../img/hexagon.svg') no-repeat;
+  font-size: $font-size-gamma;
+  font-weight: 400;
+  line-height: 1.2;
+
+  &:before {
+    @include roboto-condensed;
+    position: absolute;
+    top: rem-calc(10);
+    left: 0;
+    width: rem-calc(50);
+    height: rem-calc(44);
+    color: $color-curious-blue;
+    font-size: $font-size-kilo;
+    font-weight: 700;
+    text-align: center;
+    content: attr(data-count);
+  }
+}
+
+.page-section .hex > b {
+  @include roboto-condensed;
+  font-weight: 700;
+}
+
+.section-callout {
+  @include roboto;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+}
+
+.page-section__icon-link {
+  display: block;
+  padding: rem-calc(5 0 5 30);
+  background: url('../img/octocat.svg') 0 50% no-repeat;
+  color: $color-white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+// Columns
+// --------------------------------------------------------------------------
+
+.page-section__column-wrap {
+  @include clearfix;
+  margin-bottom: rem-calc(25);
+}
+
+.page-section__column {
+  @include at-least(medium) {
+    width: 50%;
+    padding: rem-calc(0 35 0 0);
+    float: left;
+  }
+}
+
+.page-section__column + .page-section__column {
+  margin-top: rem-calc(35);
+
+  @include at-least(medium) {
+    margin: 0;
+    padding: rem-calc(0 0 0 35);
+  }
+}
+
+.page-section__column-wrap--two-thirds .page-section__column {
+  @include at-least(medium) {
+    width: 45%;
+  }
+}
+
+.page-section__column-wrap--two-thirds .page-section__column + .page-section__column {
+  @include at-least(medium) {
+    width: 55%;
+  }
+}
+
+
+
+// Figure
+// --------------------------------------------------------------------------
+
+.page-section__figure > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+// Banner section
+// --------------------------------------------------------------------------
+
+.banner-section {
+  position: relative;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: rem-calc(500);
+    background: url('../img/graphite_pattern.svg') no-repeat;
+    background-size: 100%;
+    content: '';
+    opacity: .3;
+  }
+
+  &:before {
+    right: 55%;
+  }
+
+  &:after {
+    left: 55%;
+  }
+}
+
+.banner-section > .wrapper {
+  @include clearfix;
+  position: relative;
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(40);
+  color: $color-white;
+}

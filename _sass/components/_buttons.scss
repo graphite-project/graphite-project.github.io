@@ -1,0 +1,164 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+
+
+// Default
+// ------------------------------------
+
+.btn {
+  @include button;
+}
+
+
+
+// Primary
+// ------------------------------------
+
+.btn--primary {
+  @include font-smoothing;
+  border-color: $color-blue;
+  background: $color-blue;
+  color: $color-white;
+
+  &:hover {
+    background: $color-dark-blue;
+  }
+}
+
+
+
+// Secondary
+// ------------------------------------
+
+.btn--secondary {
+  @include font-smoothing;
+  border-color: $color-white;
+  background: $color-white;
+  color: $color-haiti;
+
+  &:hover {
+    border-color: $color-gray;
+    background: $color-gray;
+  }
+}
+
+
+// Small
+// ------------------------------------
+
+.btn--small {
+  @include roboto;
+  height: rem-calc(30);
+  padding: rem-calc(0 16);
+  font-size: $font-size-delta;
+  font-weight: 400;
+  line-height: rem-calc(30);
+}
+
+
+
+// Outline
+// ------------------------------------
+
+.btn--outline {
+  border-color: $color-white;
+  background: transparent;
+  color: $color-white;
+
+  &:hover {
+    background: $color-white;
+    color: $color-dark-green;
+  }
+}
+
+.btn--outline-alt {
+  border-color: $color-dark-green;
+  background: transparent;
+  color: $color-dark-green;
+
+  &:hover {
+    background: $color-dark-green;
+    color: $color-white;
+  }
+}
+
+.btn--outline-dark {
+  border-color: $color-dark-purple;
+  background: transparent;
+  color: $color-dark-purple;
+
+  &:hover {
+    background: $color-dark-purple;
+    color: $color-white;
+  }
+}
+
+.btn--outline-deep {
+  border-color: $color-deep-green;
+  background: transparent;
+  color: $color-deep-green;
+
+  &:hover {
+    background: $color-deep-green;
+    color: $color-white;
+  }
+}
+
+
+
+// Gradient
+// ------------------------------------
+
+.btn--gradient {
+  position: relative;
+  border-color: transparent;
+  background: linear-gradient(to right, $color-turquoise, $color-blue) no-repeat;
+  color: $color-blue;
+  background-clip: padding-box;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    border-radius: rem-calc(2);
+    background: $color-white;
+    content: '';
+  }
+
+  &:hover {
+    @include font-smoothing;
+    border-color: $color-blue;
+    background: $color-blue;
+    color: $color-white;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.btn--gradient > span {
+  position: relative;
+}
+
+
+
+// Transparent
+// ------------------------------------
+
+.btn--transparent {
+  @include font-smoothing;
+  border-color: $color-white;
+  background: rgba($color-white, .2);
+  color: $color-white;
+
+  &:hover {
+    background: $color-white;
+    color: $color-wedgewood;
+  }
+}

@@ -1,0 +1,8 @@
+# Site settings
+title: Graphite
+baseurl: ""
+url: "http://graphite-project.github.io"
+
+exclude: ['css', '_sass', 'node_modules', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json']
+
+keep_files: ['_site/css']

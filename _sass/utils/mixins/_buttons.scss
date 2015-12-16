@@ -1,0 +1,24 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+
+
+@mixin button {
+  @include roboto-condensed;
+  display: inline-block;
+  width: auto;
+  height: rem-calc(55);
+  padding: rem-calc(0 32);
+  border: 1px solid;
+  font-size: $font-size-gamma;
+  font-weight: 700;
+  line-height: rem-calc(53); // offset for border widths
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  border-radius: rem-calc(4);
+}

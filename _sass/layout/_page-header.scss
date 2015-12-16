@@ -1,0 +1,203 @@
+// =========================================================================
+// PAGE HEADER
+// =========================================================================
+
+
+
+// Header
+// -------------------------------------------------------------------------
+
+.page-header {
+  position: relative;
+  background: $color-white;
+
+  @include at-least(small) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    will-change: transform;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: opacity 100ms;
+      background: linear-gradient(to left, $color-purple, $color-curious-blue) no-repeat;
+      content: '';
+      opacity: 0;
+    }
+  }
+
+  &:before {
+    display: block;
+    width: 100%;
+    height: rem-calc(6);
+    transition: opacity 100ms;
+    background: linear-gradient(to right, $color-turquoise, $color-blue);
+    content: '';
+    opacity: 1;
+  }
+}
+
+.page-header.smaller {
+  @include at-least(small) {
+    &:before {
+      opacity: 0;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.page-header > .wrapper {
+  @include clearfix;
+  position: relative; // z-index
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  transition: all 250ms;
+
+  @include at-least(small) {
+    padding-top: rem-calc(58);
+    padding-bottom: rem-calc(58);
+  }
+}
+
+.page-header.smaller > .wrapper {
+  @include at-least(small) {
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+  }
+}
+
+
+
+// Logo
+// -------------------------------------------------------------------------
+
+.site-logo {
+  width: rem-calc(166);
+  height: rem-calc(55);
+  float: left;
+  background: url('../img/graphite-logo_color.png') 0 50% no-repeat;
+  background-size: contain;
+
+  @include at-least(small) {
+    width: rem-calc(287);
+    height: rem-calc(76);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../img/graphite-logo_color@2x.png');
+  }
+}
+
+.smaller .site-logo {
+  background-image: url('../img/graphite-logo_white.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../img/graphite-logo_white@2x.png');
+  }
+}
+
+
+
+// Site nav
+// -------------------------------------------------------------------------
+
+.site-nav {
+  position: relative;
+  padding-left: rem-calc(166); // logo width
+  text-align: right;
+
+  @include at-least(small) {
+    padding-top: rem-calc(18); // align nav items w/ logo
+  }
+}
+
+.site-nav__home,
+.site-nav__list,
+.site-nav__actions {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.site-nav__list,
+.site-nav__actions {
+  display: none;
+}
+
+.site-nav__actions {
+  @media (min-width: rem-calc(525)) {
+    display: inline-block;
+  }
+}
+
+.site-nav__list {
+  @media (min-width: rem-calc(1100)) {
+    display: inline-block;
+  }
+}
+
+.site-nav__item {
+  display: inline-block;
+  padding: rem-calc(0 15);
+}
+
+.site-nav__actions > .site-nav__item {
+  padding: rem-calc(0 7);
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.site-nav__link {
+  @include roboto-condensed;
+  transition: color 100ms;
+  color: $color-medium-gray;
+  font-size: $font-size-delta;
+  text-decoration: none;
+}
+
+.smaller .site-nav__link {
+  @include at-least(small) {
+    color: $color-white;
+  }
+}
+
+.smaller .site-nav__button.btn--gradient {
+  @include at-least(small) {
+    @include font-smoothing;
+    border-color: $color-white;
+    background: transparent;
+    color: $color-white;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      background: $color-white;
+      color: $color-curious-blue;
+    }
+  }
+}
+
+.smaller .site-nav__button.btn--primary {
+  @include at-least(small) {
+    border-color: $color-white;
+    background: $color-white;
+    color: $color-curious-blue;
+
+    &:hover {
+      @include font-smoothing;
+      background: transparent;
+      color: $color-white;
+    }
+  }
+}

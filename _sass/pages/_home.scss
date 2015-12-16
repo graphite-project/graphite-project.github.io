@@ -1,0 +1,99 @@
+// ==========================================================================
+// HOME
+// ==========================================================================
+
+
+.page {
+  @include at-least(small) {
+    padding-top: rem-calc(198); // header height
+  }
+}
+
+
+// Page sections
+// --------------------------------------------------------------------------
+
+// Overview
+// ------------------------------------
+
+.page-section--overview .section-header {
+  color: $color-dark-blue;
+}
+
+.page-section--overview .hr {
+  background: linear-gradient(to right, $color-purple, $color-curious-blue) no-repeat;
+}
+
+
+
+// Architecture
+// ------------------------------------
+
+.page-section--architecture {
+  padding-bottom: 0;
+}
+
+
+// Overview
+// ------------------------------------
+
+.banner-section--questions .section-header {
+  color: $color-deep-green;
+}
+
+.banner-section--questions .section-subhead {
+  color: $color-medium-gray;
+}
+
+.page-section--questions .hr {
+  background: $color-deep-green;
+}
+
+
+
+// Banner sections
+// --------------------------------------------------------------------------
+
+// Home page intro
+// ------------------------------------
+
+.banner-section--intro {
+  @include roboto-condensed;
+  @include font-smoothing;
+  background: linear-gradient(to right, $color-turquoise, $color-blue) no-repeat;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner-section--intro h2 {
+  margin: rem-calc(0 0 20);
+  font-size: $font-size-mega;
+}
+
+.banner-section--intro h3 {
+  margin: 0;
+  font-size: rem-calc(27);
+}
+
+.banner-section--intro h3 + h3 {
+  margin: rem-calc(0 0 20);
+}
+
+.banner-section--intro h4 {
+  margin: rem-calc(0 0 20);
+  font-size: $font-size-beta;
+}
+
+
+
+// Getting Started
+// ------------------------------------
+
+.banner-section--getting-started {
+  @include font-smoothing;
+  background: $color-haiti;
+}
+
+.banner-section--getting-started .hr {
+  background: $color-white;
+}
