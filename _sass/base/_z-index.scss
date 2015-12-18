@@ -19,6 +19,10 @@ $z-index-6: 600;
 // Z-Index applications
 // ---------------------------------------------------------------------------
 
+.page:before {
+  z-index: -1;
+}
+
 // 100
 .banner-section:before,
 .banner-section:after {

@@ -70,7 +70,7 @@
 .page-header.smaller > .wrapper {
   @include at-least(small) {
     padding-top: rem-calc(20);
-    padding-bottom: rem-calc(20);
+    padding-bottom: 0;
   }
 }
 
@@ -131,6 +131,11 @@
   display: none;
 }
 
+.smaller .site-nav__list,
+.smaller .site-nav__actions {
+  vertical-align: top;
+}
+
 .site-nav__actions {
   @media (min-width: rem-calc(525)) {
     display: inline-block;
@@ -166,7 +171,14 @@
 
 .smaller .site-nav__link {
   @include at-least(small) {
+    display: block;
+    height: rem-calc(75);
+    padding-top: rem-calc(18);
     color: $color-white;
+
+    &.active {
+      border-bottom: 3px solid rgba($color-white, .8);
+    }
   }
 }
 

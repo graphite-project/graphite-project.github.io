@@ -4,8 +4,23 @@
 
 
 .page {
+  position: relative;
+  overflow: hidden;
+
   @include at-least(small) {
     padding-top: rem-calc(198); // header height
+  }
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    bottom: -25%;
+    left: -25%;
+    transform: rotate(12deg);
+    background: url('../img/honeycomb.svg') repeat;
+    content: '';
   }
 }
 
