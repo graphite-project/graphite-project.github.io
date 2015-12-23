@@ -3,7 +3,7 @@
     <a class="site-logo" href="">
       <!-- <img class="site-nav__logo" src="{{ site.baseurl }}/img/graphite-logo_color.svg"> -->
     </a>
-    <nav class="site-nav">
+    <nav class="site-nav" id="siteNav">
       <ul class="site-nav__list" id="anchors">
         <li class="site-nav__item">
           <a class="site-nav__link" href="#overview">Overview</a>
@@ -22,15 +22,20 @@
         </li>
       </ul>
       <ul class="site-nav__actions">
-        <li class="site-nav__item">
+        <!-- <li class="site-nav__item">
           <a class="site-nav__button btn btn--gradient" href="#">
             <span>Live Demo</span>
           </a>
-        </li>
+        </li> -->
         <li class="site-nav__item">
           <a class="site-nav__button btn btn--primary" href="#">Download</a>
         </li>
       </ul>
     </nav>
+    <button class="site-nav__toggle" id="siteNavToggle">
+      <svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+        <path class="site-nav__toggle-icon" d="M5.5 33h33v-3.667h-33V33zm0-9.167h33v-3.667h-33v3.667zM5.5 11v3.667h33V11h-33z"/>
+      </svg>
+    </button>
   </div>
 </header>

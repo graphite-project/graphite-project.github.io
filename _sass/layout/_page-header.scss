@@ -11,7 +11,7 @@
   position: relative;
   background: $color-white;
 
-  @include at-least(small) {
+  @media (min-width: $bp-nav) {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@
 }
 
 .page-header.smaller {
-  @include at-least(small) {
+  @media (min-width: $bp-nav) {
     &:before {
       opacity: 0;
     }
@@ -70,6 +70,10 @@
 .page-header.smaller > .wrapper {
   @include at-least(small) {
     padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+  }
+
+  @media (min-width: rem-calc(1100)) {
     padding-bottom: 0;
   }
 }
@@ -110,25 +114,46 @@
 // -------------------------------------------------------------------------
 
 .site-nav {
-  position: relative;
-  padding-left: rem-calc(166); // logo width
-  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  padding: rem-calc(100 40 40);
+  transition: left ease-in-out 250ms;
+  background: rgba($color-haiti, .9);
+  will-change: transform;
 
-  @include at-least(small) {
-    padding-top: rem-calc(18); // align nav items w/ logo
+  @media (min-width: $bp-nav) {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    padding: rem-calc(18 0 0 166); // align nav items w/ logo and offset for logo width
+    background: transparent;
+    text-align: right;
   }
 }
 
-.site-nav__home,
-.site-nav__list,
-.site-nav__actions {
-  display: inline-block;
-  vertical-align: middle;
+.site-nav.nav-open {
+  left: rem-calc(40);
 }
+
+// .body.nav-open {
+//   overflow: hidden;
+
+//   @media (min-width: $bp-nav) {
+//     overflow: visible;
+//   }
+// }
 
 .site-nav__list,
 .site-nav__actions {
-  display: none;
+  @media (min-width: $bp-nav) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .smaller .site-nav__list,
@@ -143,14 +168,21 @@
 }
 
 .site-nav__list {
-  @media (min-width: rem-calc(1100)) {
+  margin-bottom: rem-calc(20);
+
+  @media (min-width: $bp-nav) {
     display: inline-block;
+    margin-bottom: 0;
   }
 }
 
 .site-nav__item {
-  display: inline-block;
+  display: block;
   padding: rem-calc(0 15);
+
+  @media (min-width: $bp-nav) {
+    display: inline-block;
+  }
 }
 
 .site-nav__actions > .site-nav__item {
@@ -163,14 +195,21 @@
 
 .site-nav__link {
   @include roboto-condensed;
-  transition: color 100ms;
-  color: $color-medium-gray;
-  font-size: $font-size-delta;
+  display: block;
+  padding: rem-calc(15 0);
+  color: $color-white;
   text-decoration: none;
+
+  @media (min-width: $bp-nav) {
+    padding: 0;
+    transition: color 100ms;
+    color: $color-medium-gray;
+    font-size: $font-size-delta;
+  }
 }
 
 .smaller .site-nav__link {
-  @include at-least(small) {
+  @media (min-width: $bp-nav) {
     display: block;
     height: rem-calc(75);
     padding-top: rem-calc(18);
@@ -212,4 +251,39 @@
       color: $color-white;
     }
   }
+}
+
+.site-nav__toggle {
+  display: block;
+  position: relative;
+  width: rem-calc(44);
+  height: rem-calc(44);
+  margin-top: rem-calc(5);
+  padding: 0;
+  float: right;
+  border: 0;
+  border-radius: rem-calc(4);
+  background: transparent;
+
+  @media (min-width: $bp-nav) {
+    display: none;
+  }
+}
+
+.site-nav__toggle.nav-open {
+  position: fixed;
+  right: rem-calc(20);
+}
+
+.site-nav__toggle > svg {
+  display: block;
+}
+
+// Menu icon path
+.site-nav__toggle-icon {
+  fill: $color-haiti;
+}
+
+.site-nav__toggle.nav-open .site-nav__toggle-icon {
+  fill: $color-white;
 }

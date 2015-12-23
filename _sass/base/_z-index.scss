@@ -43,11 +43,13 @@ $z-index-6: 600;
 }
 
 // 400
-.page-header {
+.page-header,
+.site-nav {
   z-index: $z-index-4;
 }
 
 // 500
-.page-header > .wrapper {
+.page-header > .wrapper,
+.site-nav__toggle {
   z-index: $z-index-5;
 }

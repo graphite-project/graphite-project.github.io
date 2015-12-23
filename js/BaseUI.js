@@ -1,6 +1,7 @@
 var BaseUI = {
   $window: $(window),
   $anchors: $('#anchors'),
+  $siteNavToggle: $('#siteNavToggle'),
 
   initialize: function() {
     BaseUI.addListeners();
@@ -9,6 +10,7 @@ var BaseUI = {
   addListeners: function() {
     BaseUI.$anchors.find('li > a').on('click', BaseUI.anchorClickHandler);
     BaseUI.$window.on('scroll', BaseUI.windowScrollHandler);
+    BaseUI.$siteNavToggle.on('click', BaseUI.navToggleClickHandler);
   },
 
   scrollToSection: function(el) {
@@ -49,6 +51,12 @@ var BaseUI = {
     }
   },
 
+  toggleMobileMenu: function(el) {
+    $(el).toggleClass('nav-open');
+    $('#siteNav').toggleClass('nav-open');
+    $('body').toggleClass('nav-open');
+  },
+
   anchorClickHandler: function() {
     BaseUI.scrollToSection(this);
   },
@@ -56,6 +64,10 @@ var BaseUI = {
   windowScrollHandler: function() {
     BaseUI.resizeHeader();
     BaseUI.highlightActiveNav();
+  },
+
+  navToggleClickHandler: function() {
+    BaseUI.toggleMobileMenu(this);
   }
 }
 
