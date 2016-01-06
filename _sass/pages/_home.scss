@@ -73,7 +73,8 @@
 .banner-section--intro {
   @include roboto-condensed;
   @include font-smoothing;
-  background: linear-gradient(to right, $color-turquoise, $color-blue) no-repeat;
+  //background: linear-gradient(to right, $color-turquoise, $color-blue) no-repeat;
+  background: linear-gradient(to right, $color-turquoise, $color-dark-blue) no-repeat;
   font-weight: 700;
   text-align: center;
 }
@@ -104,9 +105,21 @@
 
 .banner-section--getting-started {
   @include font-smoothing;
-  background: $color-haiti;
+  background: linear-gradient(to right bottom, $color-deep-green, $color-haiti, $color-dark-blue) no-repeat;
 }
 
-.banner-section--getting-started .hr {
+.banner-section--active-development {
+  @include font-smoothing;
+  background: radial-gradient(at 50% 100%, $color-dark-purple, $color-haiti) no-repeat;
+}
+
+.banner-section--footer {
+  @include font-smoothing;
+  background: linear-gradient(to right, $color-deep-green, $color-haiti) no-repeat;
+}
+
+.banner-section--getting-started .hr,
+.banner-section--active-development .hr,
+.banner-section--footer .hr   {
   background: $color-white;
 }
