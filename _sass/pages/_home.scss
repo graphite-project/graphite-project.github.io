@@ -5,8 +5,9 @@
 
 .page {
   position: relative;
+  padding-top: rem-calc(101); // header height
 
-  @media (min-width: $bp-nav) {
+  @include at-least(small) {
     padding-top: rem-calc(198); // header height
   }
 
@@ -21,6 +22,7 @@
     content: '';
   }
 }
+
 
 
 // Page sections
@@ -73,10 +75,18 @@
 .banner-section--intro {
   @include roboto-condensed;
   @include font-smoothing;
-  //background: linear-gradient(to right, $color-turquoise, $color-blue) no-repeat;
   background: linear-gradient(to right, $color-turquoise, $color-dark-blue) no-repeat;
   font-weight: 700;
   text-align: center;
+
+  &:before {
+    right: 58%;
+  }
+
+  &:after {
+    top: -23%;
+    left: 58%;
+  }
 }
 
 .banner-section--intro h2 {
@@ -106,20 +116,72 @@
 .banner-section--getting-started {
   @include font-smoothing;
   background: linear-gradient(to right bottom, $color-deep-green, $color-haiti, $color-dark-blue) no-repeat;
+
+  @include at-least(small) {
+    &:after {
+      top: -30%;
+      left: 62%;
+    }
+  }
+
+  &:before {
+    top: -15%;
+    right: 53%;
+  }
+
+  &:after {
+    top: 25%;
+    left: 55%;
+  }
 }
+
+
+
+// Active Development
+// ------------------------------------
 
 .banner-section--active-development {
   @include font-smoothing;
   background: radial-gradient(at 50% 100%, $color-dark-purple, $color-haiti) no-repeat;
+
+  &:before {
+    top: -25%;
+    right: 55%;
+  }
+
+  &:after {
+    top: -15%;
+    left: 60%;
+  }
 }
+
+
+
+// Footer
+// ------------------------------------
 
 .banner-section--footer {
   @include font-smoothing;
   background: linear-gradient(to right, $color-deep-green, $color-haiti) no-repeat;
+
+  &:before {
+    top: -35%;
+    right: 65%;
+  }
+
+  &:after {
+    top: -50%;
+    left: 45%;
+  }
 }
+
+
+
+// HRs
+// ------------------------------------
 
 .banner-section--getting-started .hr,
 .banner-section--active-development .hr,
-.banner-section--footer .hr   {
+.banner-section--footer .hr {
   background: $color-white;
 }

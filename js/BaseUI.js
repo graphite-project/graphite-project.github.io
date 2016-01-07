@@ -9,8 +9,10 @@ var BaseUI = {
 
   addListeners: function() {
     BaseUI.$anchors.find('li > a').on('click', BaseUI.anchorClickHandler);
+    $('#footerAnchors').find('li > a').on('click', BaseUI.anchorClickHandler);
     BaseUI.$window.on('scroll', BaseUI.windowScrollHandler);
     BaseUI.$siteNavToggle.on('click', BaseUI.navToggleClickHandler);
+    $(document).on('click', BaseUI.documentClickHandler);
   },
 
   scrollToSection: function(el) {
@@ -57,6 +59,16 @@ var BaseUI = {
     $('body').toggleClass('nav-open');
   },
 
+  clickOffMenu: function() {
+    var target = $(event.target);
+
+    if (!$(target).closest('#siteNav.nav-open').length && !$(target).is(BaseUI.$siteNavToggle)) {
+      BaseUI.$siteNavToggle.removeClass('nav-open');
+      $('#siteNav').removeClass('nav-open');
+      $('body').removeClass('nav-open');
+    }
+  },
+
   anchorClickHandler: function() {
     BaseUI.scrollToSection(this);
   },
@@ -68,6 +80,10 @@ var BaseUI = {
 
   navToggleClickHandler: function() {
     BaseUI.toggleMobileMenu(this);
+  },
+
+  documentClickHandler: function() {
+    BaseUI.clickOffMenu();
   }
 }
 

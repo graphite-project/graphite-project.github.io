@@ -13,11 +13,10 @@
   right: 0;
   left: 0;
   background: $color-white;
-
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
 
   @media (min-width: $bp-nav) {
     width: 100%;
-    will-change: transform;
   }
 
   &:before {
@@ -41,7 +40,6 @@
     content: '';
     opacity: 0;
   }
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 .page-header.smaller {
@@ -138,15 +136,11 @@
 
 .site-nav.nav-open {
   left: rem-calc(40);
+
+  @media (min-width: $bp-nav) {
+    left: auto;
+  }
 }
-
-// .body.nav-open {
-//   overflow: hidden;
-
-//   @media (min-width: $bp-nav) {
-//     overflow: visible;
-//   }
-// }
 
 .site-nav__list,
 .site-nav__actions {
@@ -195,12 +189,13 @@
 
 .site-nav__link {
   @include roboto-condensed;
-  display: block;
+  display: inline-block;
   padding: rem-calc(15 0);
   color: $color-white;
   text-decoration: none;
 
   @media (min-width: $bp-nav) {
+    display: block;
     padding: 0;
     transition: color 100ms;
     color: $color-medium-gray;
@@ -256,13 +251,14 @@
 .site-nav__toggle {
   display: block;
   position: relative;
-  width: rem-calc(44);
-  height: rem-calc(44);
+  width: rem-calc(40);
+  height: rem-calc(40);
   margin-top: rem-calc(5);
   padding: 0;
   float: right;
   border: 0;
   border-radius: rem-calc(4);
+  outline: none;
   background: transparent;
 
   @include at-least(small) {
@@ -274,21 +270,68 @@
   }
 }
 
-.site-nav__toggle.nav-open {
-  position: absolute;
-  right: rem-calc(20);
-}
-
-.site-nav__toggle > svg {
+.site-nav__toggle > .m,
+.site-nav__toggle > .t,
+.site-nav__toggle > .b {
   display: block;
+  position: absolute;
+  height: rem-calc(2);
+  pointer-events: none;
 }
 
-// Menu icon path
-.site-nav__toggle-icon {
-  fill: $color-haiti;
+.site-nav__toggle > .m {
+  top: rem-calc(19);
+  right: rem-calc(8);
+  left: rem-calc(8);
+  transition: opacity ease-in-out 125ms;
+  background-color: $color-haiti;
+  opacity: 1;
+  transition-delay: 125ms, 0s;
 }
 
-.page-header.smaller .site-nav__toggle-icon,
-.site-nav__toggle.nav-open .site-nav__toggle-icon {
-  fill: $color-white;
+.site-nav__toggle > .t,
+.site-nav__toggle > .b {
+  right: rem-calc(8);
+  left: rem-calc(8);
+  background-color: $color-haiti;
+  content: '';
+  transition-duration: 125ms, 125ms;
+  transition-delay: 125ms, 0s;
+}
+
+.site-nav__toggle > .t {
+  top: rem-calc(10);
+  transition-property: top, transform;
+}
+
+.site-nav__toggle > .b {
+  bottom: rem-calc(10);
+  transition-property: bottom, transform;
+}
+
+.smaller .site-nav__toggle > .m,
+.smaller .site-nav__toggle > .t,
+.smaller .site-nav__toggle > .b {
+  background: $color-white;
+}
+
+.site-nav__toggle.nav-open > .m {
+  opacity: 0;
+  transition-delay: 0s, 125ms;
+}
+
+.site-nav__toggle.nav-open > .t,
+.site-nav__toggle.nav-open > .b {
+  background-color: $color-white;
+  transition-delay: 0s, 125ms;
+}
+
+.site-nav__toggle.nav-open > .t {
+  top: rem-calc(19);
+  transform: rotate(45deg);
+}
+
+.site-nav__toggle.nav-open > .b {
+  bottom: rem-calc(19);
+  transform: rotate(-45deg);
 }
