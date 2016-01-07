@@ -14,10 +14,10 @@
   left: 0;
   background: $color-white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+  will-change: transform;
 
   @media (min-width: $bp-nav) {
     width: 100%;
-    will-change: transform;
   }
 
   &:before {
@@ -137,15 +137,11 @@
 
 .site-nav.nav-open {
   left: rem-calc(40);
+
+  @media (min-width: $bp-nav) {
+    left: auto;
+  }
 }
-
-// .body.nav-open {
-//   overflow: hidden;
-
-//   @media (min-width: $bp-nav) {
-//     overflow: visible;
-//   }
-// }
 
 .site-nav__list,
 .site-nav__actions {
@@ -194,12 +190,13 @@
 
 .site-nav__link {
   @include roboto-condensed;
-  display: block;
+  display: inline-block;
   padding: rem-calc(15 0);
   color: $color-white;
   text-decoration: none;
 
   @media (min-width: $bp-nav) {
+    display: block;
     padding: 0;
     transition: color 100ms;
     color: $color-medium-gray;
@@ -279,6 +276,7 @@
   display: block;
   position: absolute;
   height: rem-calc(2);
+  pointer-events: none;
 }
 
 .site-nav__toggle > .m {
