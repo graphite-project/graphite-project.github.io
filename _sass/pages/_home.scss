@@ -5,8 +5,9 @@
 
 .page {
   position: relative;
+  padding-top: rem-calc(101); // header height
 
-  @media (min-width: $bp-nav) {
+  @include at-least(small) {
     padding-top: rem-calc(198); // header height
   }
 
