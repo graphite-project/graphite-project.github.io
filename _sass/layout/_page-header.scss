@@ -122,7 +122,6 @@
   transition: left ease-in-out 250ms;
   background: rgba($color-haiti, .9);
   will-change: transform;
-  min-height: 2400px;
 
   @media (min-width: $bp-nav) {
     position: relative;
@@ -260,8 +259,8 @@
   float: right;
   border: 0;
   border-radius: rem-calc(4);
-  background: transparent;
   outline: none;
+  background: transparent;
 
   @include at-least(small) {
     margin-top: rem-calc(15);
