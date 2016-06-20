@@ -71,14 +71,12 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', [
-    'scsslint',
     'sass',
     'postcss',
     'shell:jekyllBuild'
   ]);
 
   grunt.registerTask('serve', [
-    'scsslint',
     'sass',
     'postcss',
     'concurrent' // jekyllServe and watch
