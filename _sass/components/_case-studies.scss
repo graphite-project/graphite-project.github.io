@@ -28,6 +28,7 @@
 .case-study-logos .case-study__logo {
   display: block;
   margin: 0 auto;
+  height: 50px;
 
   @media (min-width: rem-calc(575)) {
     margin: 0;
