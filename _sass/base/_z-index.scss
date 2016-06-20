@@ -1,0 +1,55 @@
+// ==========================================================================
+// Z-INDEX
+// ==========================================================================
+
+
+
+// Z-Index scale
+// ---------------------------------------------------------------------------
+
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+
+
+
+// Z-Index applications
+// ---------------------------------------------------------------------------
+
+.page:before {
+  z-index: -1;
+}
+
+// 100
+.banner-section:before,
+.banner-section:after {
+  z-index: $z-index-1;
+}
+
+// 200
+.page-header,
+.banner-section > .wrapper,
+.btn--gradient:before {
+  z-index: $z-index-2;
+}
+
+// 300
+.page-header:after,
+.btn--gradient > span {
+  z-index: $z-index-3;
+}
+
+// 400
+.page-header,
+.site-nav {
+  z-index: $z-index-4;
+}
+
+// 500
+.page-header > .wrapper,
+.site-nav__toggle {
+  z-index: $z-index-5;
+}

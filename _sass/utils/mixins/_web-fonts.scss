@@ -1,0 +1,27 @@
+// ==========================================================================
+// WEB FONTS
+// ==========================================================================
+
+
+
+// Google Web Fonts
+// -------------------------------------------------------------------------
+
+@mixin roboto(
+  $weight: normal,
+  $style: normal) {
+
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin roboto-condensed(
+  $weight: normal,
+  $style: normal) {
+
+  font-family: 'Roboto Condensed', 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+  font-stretch: condensed;
+}

@@ -1,0 +1,210 @@
+---
+layout: default
+title: Graphite Home
+---
+
+<div class="banner-section banner-section--intro">
+  <div class="wrapper">
+    <h2>Graphite does two things:</h2>
+    <h3>Kick ass.</h3>
+    <h3>Chew bubblegum.</h3>
+    <h4>(And it’s all out of bubblegum.)</h4>
+    <a class="btn btn--transparent" href="">Learn more about Graphite</a>
+  </div>
+</div>
+
+<div class="page-section page-section--overview anchor" id="overview">
+  <div class="wrapper">
+    <h2 class="section-header">Overview</h2>
+    <div class="page-section__column-wrap">
+      <div class="page-section__column">
+        <hr class="hr">
+        <h3 class="section-subhead">About the Project</h3>
+        <p>Graphite is an enterprise-scale monitoring tool that runs well on cheap hardware. It was originally designed and written by <a href="#">Chris Davis</a> at <a href="#">Orbitz</a> in 2006 as side project that ultimately grew to be a foundational monitoring tool. In 2008, Orbitz allowed Graphite to be released under the open source Apache 2.0 license. Since then Chris has continued to work on Graphite and has deployed it at other companies including <a href="#">Sears</a>, where it serves as a pillar of the e-commerce monitoring system. Today many large <a href="#">companies</a> use it.</p>
+      </div>
+      <div class="page-section__column">
+        <hr class="hr">
+        <h3 class="section-subhead">What Graphite is and is not.</h3>
+        <p>Graphite does two things:</p>
+        <p class="hex" data-count="1"><b>Store numeric time-series data</b></p>
+        <p class="hex" data-count="2"><b>Render graphs of this data on demand</b></p>
+        <p>What Graphite does not do is collect data for you, however there are some <a href="#">tools</a> out there that know how to send data to graphite. Even though it often requires a little code, sending data to Graphite is very simple.</p>
+        <a class="btn btn--gradient right" href="http://graphite.readthedocs.org/en/latest/" target="_blank">
+          <span>Read the Full Documentation</span>
+        </a>
+      </div>
+    </div>
+    <hr class="hr">
+    <h3 class="section-subhead">Who uses Graphite?</h3>
+    <ul class="case-study-logos">
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+        <a class="case-study__link btn btn--gradient btn--small" href="#">
+          <span>Case Study</span>
+        </a>
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+        <a class="case-study__link btn btn--gradient btn--small" href="#">
+          <span>Case Study</span>
+        </a>
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+        <a class="case-study__link btn btn--gradient btn--small" href="#">
+          <span>Case Study</span>
+        </a>
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+        <a class="case-study__link btn btn--gradient btn--small" href="#">
+          <span>Case Study</span>
+        </a>
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+      <li class="case-study">
+        <img class="case-study__logo" src="img/vimeo.svg">
+      </li>
+    </ul>
+    <span class="section-callout subtle"><em>(just to name a few)</em></span>
+  </div>
+</div>
+
+<div class="banner-section banner-section--getting-started anchor" id="gettingStarted">
+  <div class="wrapper">
+    <h2 class="section-header">Getting Started</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Quickstart guides for installation and working with data</h3>
+    <ul class="circles-list">
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="https://github.com/obfuscurity/synthesize/" target="_blank">
+          <p>Easy Graphite Install with Synthesize</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://graphite.readthedocs.org/en/latest/feeding-carbon.html#getting-your-data-into-graphite" target="_blank">
+          <p>Getting Metrics <b>Into</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://yahoo.com">
+          <p>Getting Metrics <b>Out of</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+    </ul>
+    <a class="btn btn--outline right" href="#">Check Out All Quickstart Guides</a>
+  </div>
+</div>
+
+<div class="page-section page-section--architecture">
+  <div class="wrapper">
+    <hr class="hr">
+    <h3 class="section-subhead">The Architecture in a Nutshell</h3>
+    <div class="page-section__column-wrap page-section__column-wrap--two-thirds">
+      <div class="page-section__column">
+        <p>Graphite consists of three software components:</p>
+        <p class="hex" data-count="1"><b>carbon</b> - a <a href="#">Twisted</a> daemon that listens for time-series data</p>
+        <p class="hex" data-count="2"><b>whisper</b> - a simple database library for storing time-series data (similar in design to <a href="#">RRD</a>)</p>
+        <p class="hex" data-count="3"><b>graphite webapp</b> - A <a href="#">Django</a> webapp that renders graphs on-demand using <a href="#">Cairo</a></p>
+        <p>Feeding in your data is pretty easy, typically most of the effort is in collecting the data to begin with. As you send datapoints to Carbon, they become immediately available for graphing in the webapp. The webapp offers several ways to create and display graphs including a simple URL API for rendering that makes it easy to embed graphs in other webpages.</p>
+      </div>
+      <div class="page-section__column">
+        <figure class="page-section__figure">
+          <img src="img/architecture_diagram.png">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-section page-section--integrations anchor" id="integrations">
+  <div class="wrapper">
+    <h2 class="section-header">Integrations</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Tons of tools work with Graphite, including:</h3>
+    <ul class="integrations-list">
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+      <li class="integrations-list__item">
+        <img class="integrations-list__logo" src="img/vimeo.svg">
+      </li>
+    </ul>
+    <a class="btn btn--outline-dark right" href="http://graphite.readthedocs.org/en/latest/tools.html" target="_blank">See More Integrations</a>
+  </div>
+</div>
+
+<div class="banner-section banner-section--active-development" id="docs">
+  <div class="wrapper">
+    <h2 class="section-header">Active Development</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Github Projects</h3>
+    <p>Graphite is under constant development. Please file any issues or feature requests in Github and contribute to the project.</p>
+    <ul>
+      <li>
+        <a class="page-section__icon-link" href="https://github.com/graphite-project/carbon" target="_blank">/graphite-project/carbon</a>
+      </li>
+      <li>
+        <a class="page-section__icon-link" href="https://github.com/graphite-project/graphite-web" target="_blank">/graphite-project/graphite-web</a>
+      </li>
+      <li>
+        <a class="page-section__icon-link" href="https://github.com/graphite-project/whisper" target="_blank">/graphite-project/whisper</a>
+      </li>
+      <li>
+        <a class="page-section__icon-link" href="https://github.com/graphite-project/ceres" target="_blank">/graphite-project/ceres</a>
+      </li>
+      <li>
+        <a class="page-section__icon-link" href="https://github.com/graphite-project/graphite-project.github.io" target="_blank">/graphite-project/graphite-project.github.io</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-section page-section--questions anchor" id="support">
+  <div class="wrapper">
+    <h2 class="section-header">Questions for Graphite?</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Ask a question, or browse through the community board and FAQs to find your answer.</h3>
+    <ul class="btn-group">
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="https://answers.launchpad.net/graphite" target="_blank">Launchpad Community Support</a></li>
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Read the Official Documentation</a></li>
+    </ul>
+  </div>
+</div>

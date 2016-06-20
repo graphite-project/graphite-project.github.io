@@ -1,0 +1,17 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html class="no-js" lang="">
+  {% include head.html %}
+  <body class="body">
+    <div class="page">
+      {% include page-header.html %}
+      {{ content }}
+      {% include page-footer.html %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/BaseUI.js"></script>
+  </body>
+</html>

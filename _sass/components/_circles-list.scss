@@ -1,0 +1,64 @@
+// =========================================================================
+// CIRCLES LIST
+// =========================================================================
+
+
+
+.circles-list {
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: rem-calc(40);
+  }
+
+  @include at-least(medium) {
+    justify-content: space-between;
+  }
+}
+
+.circles-list__item {
+  display: table;
+  margin: 0 auto rem-calc(40);
+  padding: rem-calc(20 20 0);
+
+  @include at-least(small) {
+    margin: 0;
+  }
+}
+
+.circles-list__link {
+  @include roboto-condensed;
+  display: table-cell;
+  width: rem-calc(265);
+  height: rem-calc(265);
+  padding: rem-calc(20);
+  border-radius: 50%;
+  background: $color-anakiwa;
+  color: $color-dark-green;
+  font-size: rem-calc(28);
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 11px 0 $color-aquamarine;
+  vertical-align: middle;
+
+  &:hover {
+    background: $color-turquoise;
+    box-shadow: 0 11px 0 $color-puerto-rico;
+  }
+}
+
+.circles-list__link p {
+  margin-bottom: rem-calc(10);
+}
+
+.circles-list__link b {
+  @include roboto-condensed;
+  display: block;
+  font-size: rem-calc(40);
+  font-weight: 700;
+  text-transform: uppercase;
+}

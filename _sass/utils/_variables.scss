@@ -1,0 +1,57 @@
+// =========================================================================
+// VARIABLES
+// =========================================================================
+
+
+
+// Colors
+// --------------------------------------------------------------------------
+
+$color-white:         #fff;
+
+$color-blue:          #2da7ef;
+$color-dark-blue:     #227db3;
+$color-curious-blue:  #25aae1;
+
+$color-medium-gray:   #666;
+$color-light-gray:    #bbb;
+$color-gray:          #a1a1a1;
+$color-turquoise:     #5cebcf;
+$color-puerto-rico:   #52d1b8;
+
+$color-wedgewood:     #428b97;
+$color-dark-green:    #1c5b62;
+$color-deep-green:    #074b56;
+
+$color-purple:        #20409a;
+$color-dark-purple:   #4d2547;
+$color-haiti:         #0b1026;
+
+$color-anakiwa:       #78e0ff;
+$color-aquamarine:    #6bc7e3;
+
+
+
+// Font-size scale (Based on http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/)
+// ---------------------------------------------------------------------------
+
+$font-size-giga:      rem-calc(48);
+$font-size-mega:      rem-calc(36);
+$font-size-kilo:      rem-calc(24);
+$font-size-alpha:     rem-calc(21);
+$font-size-beta:      rem-calc(18);
+$font-size-gamma:     rem-calc(16);
+$font-size-delta:     rem-calc(14);
+$font-size-epsilon:   rem-calc(12);
+$font-size-zeta:      rem-calc(11);
+$font-size-milli:     rem-calc(10);
+
+
+
+// Breakpoints
+// --------------------------------------------------------------------------
+
+$bp-small: rem-calc(650);
+$bp-medium: rem-calc(992);
+$bp-large: rem-calc(1200);
+$bp-nav: rem-calc(960); // width used for nav menu breakpoints

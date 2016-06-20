@@ -1,0 +1,54 @@
+// =========================================================================
+// INTEGRATIONS
+// =========================================================================
+
+
+
+// Logos list
+// --------------------------------------------------------------------------
+
+.integrations-list {
+  margin-bottom: rem-calc(20);
+
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.integrations-list__item {
+  padding: rem-calc(20);
+  border-bottom: 1px solid $color-light-gray;
+  text-align: center;
+
+  @include at-least(small) {
+    width: 50%;
+
+    &:nth-child(odd) {
+      border-right: 1px solid $color-light-gray;
+    }
+
+    &:nth-last-child(-n+2) {
+      border-bottom: 0;
+    }
+  }
+
+  @include at-least(medium) {
+    width: 25%;
+    border-right: 1px solid $color-light-gray;
+
+    &:nth-child(4n) {
+      border-right: 0;
+    }
+
+    &:nth-last-child(-n+4) {
+      border-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

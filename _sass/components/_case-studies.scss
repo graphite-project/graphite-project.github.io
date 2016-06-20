@@ -1,0 +1,39 @@
+// ==========================================================================
+// CASE STUDIES
+// ==========================================================================
+
+
+
+// Logos list
+// --------------------------------------------------------------------------
+
+.case-study-logos {
+  @media (min-width: rem-calc(575)) {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include at-least(small) {
+    justify-content: space-between;
+  }
+}
+
+.case-study-logos .case-study {
+  padding: rem-calc(0 20 40);
+  text-align: center;
+}
+
+.case-study-logos .case-study__logo {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: rem-calc(575)) {
+    margin: 0;
+  }
+}
+
+.case-study__link {
+  margin-top: rem-calc(20);
+}

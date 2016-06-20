@@ -1,0 +1,39 @@
+// =========================================================================
+// BASE
+// =========================================================================
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include roboto;
+  color: $color-medium-gray;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hr {
+  height: 1px;
+  margin: rem-calc(0 0 10);
+  border: 0;
+  background: $color-medium-gray;
+}
+
+.right {
+  float: right;
+}
