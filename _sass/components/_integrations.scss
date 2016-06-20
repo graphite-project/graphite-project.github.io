@@ -23,6 +23,11 @@
   border-bottom: 1px solid $color-light-gray;
   text-align: center;
 
+  .integrations-list__logo {
+    max-height: 50px;
+    max-width: 150px;
+  }
+
   @include at-least(small) {
     width: 50%;
 
