@@ -653,15 +653,11 @@ ol {
 
 .site-nav__toggle > .t {
   top: 0.625rem;
-  transition-property: top, -webkit-transform;
-  transition-property: top, transform;
-  transition-property: top, transform, -webkit-transform; }
+  transition-property: top, transform; }
 
 .site-nav__toggle > .b {
   bottom: 0.625rem;
-  transition-property: bottom, -webkit-transform;
-  transition-property: bottom, transform;
-  transition-property: bottom, transform, -webkit-transform; }
+  transition-property: bottom, transform; }
 
 .smaller .site-nav__toggle > .m,
 .smaller .site-nav__toggle > .t,
@@ -679,13 +675,11 @@ ol {
 
 .site-nav__toggle.nav-open > .t {
   top: 1.1875rem;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
+  transform: rotate(45deg); }
 
 .site-nav__toggle.nav-open > .b {
   bottom: 1.1875rem;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+  transform: rotate(-45deg); }
 
 .page-section {
   padding: 4.375rem 0; }
@@ -772,6 +766,16 @@ ol {
 .page-section__column-wrap {
   margin-bottom: 1.5625rem; }
   .page-section__column-wrap:after {
+    display: table;
+    clear: both;
+    content: ''; }
+
+.page-section__full {
+  width: 100%;
+  margin-bottom: 1.5625rem;
+  padding: 0 2.1875rem 0 0;
+  float: left; }
+  .page-section__full:after {
     display: table;
     clear: both;
     content: ''; }
@@ -954,24 +958,19 @@ ol {
 
 @media (min-width: 35.9375rem) {
   .case-study-logos {
-    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center; } }
 
 @media (min-width: 40.625rem) {
   .case-study-logos {
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 .case-study-logos .case-study {
   padding: 0 1.25rem 2.5rem;
@@ -990,25 +989,20 @@ ol {
 
 @media (min-width: 40.625rem) {
   .circles-list {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
     margin-bottom: 2.5rem; } }
 
 @media (min-width: 62rem) {
   .circles-list {
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 .circles-list__item {
   display: table;
@@ -1058,18 +1052,14 @@ ol {
   margin-bottom: 1.25rem; }
   @media (min-width: 40.625rem) {
     .integrations-list {
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: center;
+          justify-content: center; } }
 
 .integrations-list__item {
   padding: 1.25rem;
@@ -1176,6 +1166,8 @@ ol {
 .banner-section--intro h2 {
   margin: 0 0 1.25rem;
   font-size: 2.25rem; }
+  .banner-section--intro h2 span {
+    font-weight: 400; }
 
 .banner-section--intro h3 {
   margin: 0;
@@ -1229,4 +1221,12 @@ ol {
 .banner-section--active-development .hr,
 .banner-section--footer .hr {
   background: #fff; }
+
+/* about */
+p.intro {
+  margin-bottom: 3.125rem; }
+
+/* Questions */
+.qanda p:nth-child(odd) {
+  margin-bottom: 0; }
 /*# sourceMappingURL=styles.css.map */

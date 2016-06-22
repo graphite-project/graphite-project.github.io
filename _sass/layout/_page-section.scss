@@ -93,6 +93,15 @@
   margin-bottom: rem-calc(25);
 }
 
+.page-section__full {
+  @include clearfix;
+  @include at-least(medium)
+    width: 100%;
+    margin-bottom: rem-calc(25);
+    padding: rem-calc(0 35 0 0);
+    float: left;
+ }
+    
 .page-section__column {
   @include at-least(medium) {
     width: 50%;
@@ -121,8 +130,6 @@
     width: 55%;
   }
 }
-
-
 
 // Figure
 // --------------------------------------------------------------------------
