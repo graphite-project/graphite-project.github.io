@@ -383,6 +383,10 @@ ol {
 .right {
   float: right; }
 
+pre {
+  background-color: #eee;
+  padding: 1.25rem; }
+
 .page:before {
   z-index: -1; }
 
@@ -1221,6 +1225,14 @@ ol {
 .banner-section--active-development .hr,
 .banner-section--footer .hr {
   background: #fff; }
+
+/* about */
+p.intro {
+  margin-bottom: 3.125rem; }
+
+/* Questions */
+.qanda p:nth-child(odd) {
+  margin-bottom: 0; }
 
 /* about */
 p.intro {
