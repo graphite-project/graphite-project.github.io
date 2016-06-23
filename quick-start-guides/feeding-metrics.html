@@ -81,13 +81,13 @@ $ sudo apt-get install -y collectd
 
       <pre>
 LoadPlugin write_graphite
-<Plugin write_graphite>
-  <Node "example">
+&lt;Plugin write_graphite&gt;
+  &lt;Node "example"&gt;
     Host "localhost"
     Port "2003"
     Prefix "collectd"
-  </Node>
-</Plugin>
+  &lt;/Node&gt;
+&lt;/Plugin&gt;
       </pre>
 
       <p>You should begin seeing metrics under the <strong>collectd</strong> metrics namespace for each server running Collectd. Some of the more common metric classes include CPU, disk activity and usage, network traffic, system load, memory usage, and more.</p>
