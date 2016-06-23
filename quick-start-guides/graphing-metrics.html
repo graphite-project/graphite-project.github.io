@@ -1,0 +1,97 @@
+---
+layout: default
+title: Case Studies
+---
+
+<div class="banner-section banner-section--intro">
+  <div class="wrapper">
+    <h2>Quick Start Guides: <span>Getting Metrics out of Graphite</span></h2>
+  </div>
+</div>
+
+<div class="page-section page-section--overview anchor">
+  <div class="wrapper">
+    <div class="page-section__full">
+      <hr class="hr">
+      <h3 class="section-subhead">How can I view my Graphite metrics?</h3>
+
+      <p>If getting metrics <em>into</em> Graphite is a walk in the park, then getting them <em>out</em> is like taking candy from a baby, on a swing, in that same park. Although the Graphite <a href="http://graphite.readthedocs.io/en/latest/render_api.html">render API</a> is a great way to retrieve graphs or metrics, and the <a href="http://grafana.org/">Grafana</a> project is undoubtedly first-in-class for Graphite user interfaces, diving into the Graphite Composer is usually the quickest way to introduce yourself to Graphite's visualization capabilities.</p>
+
+      <h3>The Composer Window</h3>
+
+      <p>The main Composer window includes a blank graph which acts as a canvas for your metrics. On the left, you'll find a navigation tree containing all of your metrics (and saved graphs) in a heirarchy mapping to their dot-delimited namespace.</p>
+
+      <p><img src="/img/quickstart_graphing1.png"></p>
+
+      <h3>Adding metrics to a graph</h3>
+
+      <p>Clicking on a metric will add (or remove) it to the graph. Here we can see the <strong><tt>collectd.graphite.memory.memory-buffered</tt></strong> metric rendered as a line chart and a legend added to the bottom of the graph. The y-axis tracks the values recorded, and the x-axis displays the time range.</p>
+
+      <p><img src="/img/quickstart_graphing2.png"></p>
+
+      <p>Selecting the other memory metrics will add them to the graph too. This is a great way to correlate different metrics at the same time.</p>
+
+      <p><img src="/img/quickstart_graphing3.png"></p>
+
+      <h3>Stacked graphs</h3>
+
+      <p>But what if we wanted to see the total memory footprint for this graph? Fortunately, Graphite has support for <strong>stacked charts</strong>. Enabling the <strong>Stacked</strong> option under the <strong>Area Mode</strong> graph options menu will cause all of our metrics to stack upon each other in the same graph.</p>
+
+      <p><img src="/img/quickstart_graphing4.png"></p>
+
+      <h3>Area graph transparency</h3>
+
+      <p>Awesome. Although admittedly it could stand for a bit less <em>psychedelicity</em> (if that's not a word, it totally should be). Let's increase the transparency by adjusting the graph <strong>Filled Area Alpha Value</strong>. In this example I've lowered it to <strong><tt>0.4</tt></strong> (1.0 is considered fully opaque).</p>
+
+      <p><img src="/img/quickstart_graphing5.png"></p>
+
+      <h3>Down the rabbit hole</h3>
+
+      <p>This is a very shallow first look at some of Graphite's graphing and output capabilities. If you haven't already, you should definitely check out more of the <a href="http://graphite.readthedocs.io/en/latest/render_api.html">render API's capabilities</a> and Graphite's huge library of <a href="http://graphite.readthedocs.io/en/latest/functions.html">transformative and statistical functions</a>.</p>
+
+      <p>If you'd like to try out a more modern UI for Graphite, the Grafana project offers their own <a href="http://play.grafana.org/">interactive sandbox</a>. This is another great way to interact with your Graphite data and it offers many more visualization types than the native Composer.</p>
+
+      <p><img src="/img/quickstart_graphing6.png"></p>
+
+    </div>
+  </div>
+</div>
+
+<div class="banner-section banner-section--getting-started anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Related Case Studies</h2>
+    <hr class="hr">
+    <ul class="circles-list">
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="https://github.com/obfuscurity/synthesize/" target="_blank">
+          <p>Easy Graphite Install with Synthesize</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://graphite.readthedocs.org/en/latest/feeding-carbon.html#getting-your-data-into-graphite" target="_blank">
+          <p>Getting Metrics <b>Into</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://yahoo.com">
+          <p>Getting Metrics <b>Out of</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-section page-section--questions anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Questions for Graphite?</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Ask a question, or browse through the community board and FAQs to find your answer.</h3>
+    <ul class="btn-group">
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="https://answers.launchpad.net/graphite" target="_blank">Launchpad Community Support</a></li>
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Read the Official Documentation</a></li>
+    </ul>
+  </div>
+</div>

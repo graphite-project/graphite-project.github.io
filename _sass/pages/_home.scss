@@ -92,6 +92,9 @@
 .banner-section--intro h2 {
   margin: rem-calc(0 0 20);
   font-size: $font-size-mega;
+  & span {
+    font-weight: 400;
+  }
 }
 
 .banner-section--intro h3 {

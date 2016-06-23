@@ -383,6 +383,10 @@ ol {
 .right {
   float: right; }
 
+pre {
+  background-color: #eee;
+  padding: 1.25rem; }
+
 .page:before {
   z-index: -1; }
 
@@ -772,6 +776,16 @@ ol {
 .page-section__column-wrap {
   margin-bottom: 1.5625rem; }
   .page-section__column-wrap:after {
+    display: table;
+    clear: both;
+    content: ''; }
+
+.page-section__full {
+  width: 100%;
+  margin-bottom: 1.5625rem;
+  padding: 0 2.1875rem 0 0;
+  float: left; }
+  .page-section__full:after {
     display: table;
     clear: both;
     content: ''; }
@@ -1176,6 +1190,8 @@ ol {
 .banner-section--intro h2 {
   margin: 0 0 1.25rem;
   font-size: 2.25rem; }
+  .banner-section--intro h2 span {
+    font-weight: 400; }
 
 .banner-section--intro h3 {
   margin: 0;
@@ -1229,4 +1245,20 @@ ol {
 .banner-section--active-development .hr,
 .banner-section--footer .hr {
   background: #fff; }
+
+/* about */
+p.intro {
+  margin-bottom: 3.125rem; }
+
+/* Questions */
+.qanda p:nth-child(odd) {
+  margin-bottom: 0; }
+
+/* about */
+p.intro {
+  margin-bottom: 3.125rem; }
+
+/* Questions */
+.qanda p:nth-child(odd) {
+  margin-bottom: 0; }
 /*# sourceMappingURL=styles.css.map */

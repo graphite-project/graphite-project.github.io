@@ -1,0 +1,88 @@
+---
+layout: default
+title: Case Studies
+---
+
+<div class="banner-section banner-section--intro">
+  <div class="wrapper">
+    <h2>Case Studies: <span>Etsy</span></h2>
+  </div>
+</div>
+
+<div class="page-section page-section--overview anchor">
+  <div class="wrapper">
+    <div class="page-section__full">
+      <hr class="hr">
+      <h3 class="section-subhead">About Etsy</h3>
+        <p class="intro">Etsy is a marketplace where people around the world connect, both online and offline, to make, sell and buy unique goods. Focused on handmade or vintage items and supplies, as well as unique factory-manufactured items, these items cover a wide range, including art, photography, clothing, jewelry, food, bath and beauty products, quilts, knick-knacks, and toys.</p>
+          
+        <div class="qanda">
+          <p><strong>What is your name?</strong></p>
+          <p>Daniel Schauenberg</p>
+
+          <p><strong>What is the name of your company?</strong></p>
+          <p>Etsy, Inc.</p>
+
+          <p><strong>What is your position or title?</strong></p>
+          <p>Senior Software Engineer</p>
+
+          <p><strong>How long has your company/org/dept/team been using Graphite?</strong></p>
+          <p>About 4 or 5 years</p>
+
+          <p><strong>What do you use Graphite to monitor?</strong></p>
+          <p>We use Graphite heavily to track and monitor etsy.com application metrics. This includes performance of different things like page render times or database requests. These timings come from StatsD which is our biggest ingress point for Graphite data. We also use counts in there heavily to get the number of e.g. logins or checkouts at any given point.</p>
+
+          <p><strong>What questions does Graphite help you answer?</strong></p>
+          <p>The most basic question we answer with Graphite is probably "How is etsy.com doing right now?". At any given point in time we can look at a myriad of dashboards to find operational metrics for every part of the app.</p>
+
+          <p><strong>What problems does Graphite help you solve?</strong></p>
+          <p>Graphite makes it really easy to create metrics ad hoc. This means a developer can add instrumentation to their feature with a single line of code and immediately get feedback. It is very self service and doesn't require anyone to enable something or explicitly grant access.</p>
+
+          <p><strong>Do you track any business or non-technical metrics in Graphite?</strong></p>
+          <p>We don't generally use Graphite for business metrics. We do however track a ton of non-technical things in there as well. It starts with tracking the sleep quality (on a completely voluntary basis, see our blog post about it) of engineers on-call. Since we are also a certified B corporation we take environmentalism and not being wasteful extremely serious. This is why we for example track the temperature and light in conference rooms to get information about whether or not we can regulate the heating and also track our waste so we know how much landfill, recycling, compost, etc we have and how it changes over time.</p>
+
+          <p><strong>Do you use Graphite for anything unique?</strong></p>
+          <p>I think the sleep tracking and graphing the amount for types of waste we dispose of is pretty unique.</p>
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="banner-section banner-section--getting-started anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Related Case Studies</h2>
+    <hr class="hr">
+    <ul class="circles-list">
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="https://github.com/obfuscurity/synthesize/" target="_blank">
+          <p>Easy Graphite Install with Synthesize</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://graphite.readthedocs.org/en/latest/feeding-carbon.html#getting-your-data-into-graphite" target="_blank">
+          <p>Getting Metrics <b>Into</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://yahoo.com">
+          <p>Getting Metrics <b>Out of</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-section page-section--questions anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Questions for Graphite?</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Ask a question, or browse through the community board and FAQs to find your answer.</h3>
+    <ul class="btn-group">
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="https://answers.launchpad.net/graphite" target="_blank">Launchpad Community Support</a></li>
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Read the Official Documentation</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+---
+layout: default
+title: Case Studies
+---
+
+<div class="banner-section banner-section--intro">
+  <div class="wrapper">
+    <h2>Quick Start Guides: <span>Getting Metrics into Graphite</span></h2>
+  </div>
+</div>
+
+<div class="page-section page-section--overview anchor">
+  <div class="wrapper">
+    <div class="page-section__full">
+      <hr class="hr">
+      <h3 class="section-subhead">How can I get my metrics into Graphite?</h3>
+
+      <p>Getting your metrics into Graphite couldn't be easier. With support for a simple plaintext format, anyone can send metrics with a minimum of fuss. Check this out.</p>
+
+      <pre>
+$ echo "foo.bar 1 `date +%s`" | nc localhost 2003
+      </pre>
+
+      <p>Congratulations, you just submitted your first measurement to Graphite!</p>
+
+      <p>This metric would be stored in a <strong>Whisper</strong> database on your Graphite server's filesystem at <tt>&lt;prefix&gt;/storage/whisper/foo/bar.wsp</tt> (in most cases, your Graphite prefix should be <tt>/opt/graphite</tt>). If you're building a new graph in the Graphite Composer, you can find your metric <strong>bar</strong> nested under the <strong>foo</strong> folder.</p>
+
+      <p>Note that Graphite uses a dot-delimited namespace structure for metrics, graphs, and even dashboards. This can be handy for grouping and organizing your metrics according to the application, server, datacenter, or even the person submitting the metric.</p>
+
+      <p>Because you probably don't want to sit around firing off metrics by hand, I'd like to suggest looking into some of these common scenarios for submitting metrics to Graphite.</p>
+
+      <h3>Cron and Shell scripts</h3>
+
+      <p>Sometimes you just need a quick and dirty way to record some metrics. No need to be embarrassed, we've all hacked today a cron job to measure something adhoc. Let's say we needed to track the number of instances of a particular process. This could be a handy way to alert when something is awry, but could just as easily be used to correlate problems elsewhere. Let's whip up something basic.</p>
+
+      <pre>
+#!/bin/bash
+
+CARBON_HOST="10.10.10.5"
+CARBON_PORT="2003"
+METRIC_NAME="debug.jdixon.procs.bad_java_app"
+TIMESTAMP=`date +%s`
+
+NUMBER_OF_WAYWARD_PROCS=`ps auwx | grep MY_BAD_JAVA_APP | wc -l`
+
+echo ${METRIC_NAME} ${NUMBER_OF_WAYWARD_PROCS} ${TIMESTAMP} | nc ${CARBON_HOST} ${CARBON_PORT}
+      </pre>
+
+      <p>Make the script executable and add it to your crontab to run at routine intervals. Last but not least, make sure that your interval matches the precision for your <a href="http://graphite.readthedocs.io/en/latest/feeding-carbon.html#step-2-configure-your-data-retention">metric schema</a> (e.g. every 60 seconds) or you may end up with gaps in your graphs.</p>
+
+      <h3>Application metrics with StatsD</h3>
+
+      <p>Tracking the performance of your application is a must. Without built-in telemetry, we're left to rely on low-level tracing tools. Thanks to tools like <a href="https://github.com/etsy/statsd">StatsD</a>, we can fire off asynchronous measurements from our apps without concern for blocking behavior or having to instrument our own collection and aggregation mechanisms.</p>
+
+      <p>Etsy released the original StatsD implementation <a href="https://codeascraft.com/2011/02/15/measure-anything-measure-everything/">back in 2011</a> as an open source metrics aggregator. Since then, a huge ecosystem of <a href="(https://github.com/etsy/statsd/wiki#client-implementations">language bindings</a> and <a href="https://github.com/etsy/statsd/wiki#server-implementations">competing server implementations</a> have grown up around it. With a few lines of code, anyone can instrument their application to fire off regular, non-blocking metrics to Graphite.</p>
+
+      <pre>
+gem "statsd-ruby"
+
+# Set up a global Statsd client for a server on localhost:8125
+$statsd = Statsd.new 'localhost', 8125
+
+# Send some stats
+$statsd.increment 'app.foo.my_counter'
+$statsd.timing 'app.foo.my_timer', 320
+$statsd.gauge 'app.foo.my_gauge', 100
+      </pre>
+
+      <p>But wait... <strong>there's more</strong>! Depending on the <a href="https://github.com/etsy/statsd/blob/master/docs/metric_types.md">metric type</a> you're submitting, StatsD will also track and report statistics such as percentiles and histograms.</p>
+
+      <h3>Host metrics with Collectd</h3>
+
+      <p>Monitoring servers (or these days, Docker containers) may be the most common use of Graphite as a time-series datastore. <a href="http://collectd.org/">Collectd</a> is a very popular collection agent thanks to its efficient performance (it's written in C), ease of configuration, and large library of read and write plugins. Most Linux distributions offer up-to-date binary packages. Installation is a breeze.</p>
+
+      <pre>
+$ sudo apt-get update
+$ sudo apt-get install -y collectd
+      </pre>
+
+      <p>A minor configuration change will be needed to direct Collectd to report metrics to your Graphite server. Edit the configuration file (typically found at <tt>/etc/collectd/collectd.conf</tt>) and then restart the <strong>collectd</strong> service.</p>
+
+      <pre>
+LoadPlugin write_graphite
+<Plugin write_graphite>
+  <Node "example">
+    Host "localhost"
+    Port "2003"
+    Prefix "collectd"
+  </Node>
+</Plugin>
+      </pre>
+
+      <p>You should begin seeing metrics under the <strong>collectd</strong> metrics namespace for each server running Collectd. Some of the more common metric classes include CPU, disk activity and usage, network traffic, system load, memory usage, and more.</p>
+
+      <h3>Alternative Transports</h3>
+
+      <p>Carbon supports additional transport mechanisms besides plaintext, such as AMQP and Python's Pickle format. If you haven't already, I encourage you to read up on these options in the <a href="http://graphite.readthedocs.io/en/latest/feeding-carbon.html#feeding-in-your-data">official Graphite documentation</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="banner-section banner-section--getting-started anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Related Case Studies</h2>
+    <hr class="hr">
+    <ul class="circles-list">
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="https://github.com/obfuscurity/synthesize/" target="_blank">
+          <p>Easy Graphite Install with Synthesize</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://graphite.readthedocs.org/en/latest/feeding-carbon.html#getting-your-data-into-graphite" target="_blank">
+          <p>Getting Metrics <b>Into</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+      <li class="circles-list__item">
+        <a class="circles-list__link" href="http://yahoo.com">
+          <p>Getting Metrics <b>Out of</b> Graphite</p>
+          <span class="btn btn--outline-alt btn--small" href="#">Read More</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-section page-section--questions anchor">
+  <div class="wrapper">
+    <h2 class="section-header">Questions for Graphite?</h2>
+    <hr class="hr">
+    <h3 class="section-subhead">Ask a question, or browse through the community board and FAQs to find your answer.</h3>
+    <ul class="btn-group">
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="https://answers.launchpad.net/graphite" target="_blank">Launchpad Community Support</a></li>
+      <li class="btn-group__item"><a class="btn btn--outline-deep" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Read the Official Documentation</a></li>
+    </ul>
+  </div>
+</div>
