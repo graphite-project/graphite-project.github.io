@@ -2,6 +2,7 @@
 title: Graphite
 baseurl: ""
 url: "http://graphite-project.github.io"
+trackingid: 'UA-79744058-1'
 
 exclude: ['_sass', 'node_modules', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json']
 
