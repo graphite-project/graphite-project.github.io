@@ -387,6 +387,10 @@ pre {
   background-color: #eee;
   padding: 1.25rem; }
 
+.text-center {
+  margin: 0 auto;
+  text-align: center; }
+
 .page:before {
   z-index: -1; }
 
