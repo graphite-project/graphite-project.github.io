@@ -50,6 +50,7 @@ $z-index-6: 600;
 
 // 500
 .page-header > .wrapper,
-.site-nav__toggle {
+.site-nav__toggle,
+.site-logo {
   z-index: $z-index-5;
 }
