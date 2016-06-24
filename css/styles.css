@@ -412,8 +412,7 @@ pre {
   z-index: 400; }
 
 .page-header > .wrapper,
-.site-nav__toggle,
-.site-logo {
+.site-nav__toggle {
   z-index: 500; }
 
 .wrapper {
@@ -496,6 +495,9 @@ pre {
     .site-logo {
       width: 17.9375rem;
       height: 4.75rem; } }
+  @media (min-width: 60rem) {
+    .site-logo {
+      z-index: 500; } }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .site-logo {
       background-image: url("../img/graphite-logo_color@2x.png"); } }

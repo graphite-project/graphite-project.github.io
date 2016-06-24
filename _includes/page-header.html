@@ -4,19 +4,19 @@
     <nav class="site-nav" id="siteNav">
       <ul class="site-nav__list" id="anchors">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="/#overview">Overview</a>
+          <a class="site-nav__link anchor" href="/#overview">Overview</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="/#gettingStarted">Getting Started</a>
+          <a class="site-nav__link anchor" href="/#gettingStarted">Getting Started</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="/#integrations">Integrations</a>
+          <a class="site-nav__link anchor" href="/#integrations">Integrations</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="/case-studies">Case Studies</a>
+          <a class="site-nav__link {% if page.url == '/case-studies/' %}active{% endif %}" href="/case-studies">Case Studies</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="/quick-start-guides">Quickstart Guides</a>
+          <a class="site-nav__link {% if page.url == '/quick-start-guides/' %}active{% endif %}" href="/quick-start-guides">Quickstart Guides</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Docs</a>

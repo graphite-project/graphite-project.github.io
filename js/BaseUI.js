@@ -8,8 +8,8 @@ var BaseUI = {
   },
 
   addListeners: function() {
-    BaseUI.$anchors.find('li > a').on('click', BaseUI.anchorClickHandler);
-    $('#footerAnchors').find('li > a').on('click', BaseUI.anchorClickHandler);
+    BaseUI.$anchors.find('li > a.anchor').on('click', BaseUI.anchorClickHandler);
+    $('#footerAnchors').find('li > a.anchor').on('click', BaseUI.anchorClickHandler);
     BaseUI.$window.on('scroll', BaseUI.windowScrollHandler);
     BaseUI.$siteNavToggle.on('click', BaseUI.navToggleClickHandler);
     $(document).on('click', BaseUI.documentClickHandler);
@@ -44,12 +44,12 @@ var BaseUI = {
     if (windscroll >= 200) {
       $('div.anchor').each(function(i) {
         if ($(this).position().top <= windscroll + 120) {
-          BaseUI.$anchors.find('li > a.active').removeClass('active');
-          BaseUI.$anchors.find('li > a').eq(i).addClass('active');
+          BaseUI.$anchors.find('li > .anchor.active').removeClass('active');
+          BaseUI.$anchors.find('li > .anchor').eq(i).addClass('active');
         }
       });
     } else {
-      $('#anchors a.active').removeClass('active');
+      $('#anchors .anchor.active').removeClass('active');
     }
   },
 

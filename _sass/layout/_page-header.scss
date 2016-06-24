@@ -94,6 +94,10 @@
     height: rem-calc(76);
   }
 
+  @media (min-width: $bp-nav) {
+    z-index: 500;
+  }
+
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('../img/graphite-logo_color@2x.png');
   }
