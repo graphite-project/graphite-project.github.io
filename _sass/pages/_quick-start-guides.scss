@@ -3,13 +3,10 @@
 // ==========================================================================
 
 /* about */
-p.intro {
-  margin-bottom: rem-calc(50);
-}
 
-/* Questions */
-.qanda {
-  p:nth-child(odd){
-    margin-bottom: 0;
-  }
+.quick-start {
+
+	img {
+		max-width: 100%;
+	}
 }

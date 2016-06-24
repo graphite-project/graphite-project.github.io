@@ -1250,4 +1250,8 @@ p.intro {
 /* Questions */
 .qanda p:nth-child(odd) {
   margin-bottom: 0; }
+
+/* about */
+.quick-start img {
+  max-width: 100%; }
 /*# sourceMappingURL=styles.css.map */
