@@ -55,20 +55,20 @@
 .page-header > .wrapper {
   @include clearfix;
   position: relative; // z-index
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  padding-top: rem-calc(15);
+  padding-bottom: rem-calc(15);
   transition: all 250ms;
 
   @include at-least(small) {
-    padding-top: rem-calc(58);
-    padding-bottom: rem-calc(58);
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(40);
   }
 }
 
 .page-header.smaller > .wrapper {
   @include at-least(small) {
-    padding-top: rem-calc(20);
-    padding-bottom: rem-calc(20);
+    padding-top: rem-calc(0);
+    padding-bottom: rem-calc(0);
   }
 
   @media (min-width: $bp-nav) {
@@ -101,6 +101,8 @@
 
 .smaller .site-logo {
   background-image: url('../img/graphite-logo_white.png');
+  margin-top: rem-calc(20);
+  width: rem-calc(190);
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('../img/graphite-logo_white@2x.png');
@@ -129,7 +131,7 @@
     right: auto;
     bottom: auto;
     left: auto;
-    padding: rem-calc(18 0 0 166); // align nav items w/ logo and offset for logo width
+    padding: rem-calc(34 0 0 166); // align nav items w/ logo and offset for logo width
     background: transparent;
     text-align: right;
   }
@@ -180,11 +182,17 @@
   }
 }
 
+.site-nav__button.btn--primary {
+position: relative;
+top: rem-calc(-90);
+right: rem-calc(10px);
+}
+
 .site-nav__actions > .site-nav__item {
   padding: rem-calc(0 7);
 
   &:last-child {
-    padding-right: 0;
+    //padding-right: 0;
   }
 }
 
@@ -236,6 +244,9 @@
 }
 
 .smaller .site-nav__button.btn--primary {
+  position: relative;
+top: 0;
+right: 0;
   @include at-least(small) {
     border-color: $color-white;
     background: $color-white;

@@ -3,7 +3,6 @@
     <a class="site-logo" href="/"></a>
     <nav class="site-nav" id="siteNav">
       <ul class="site-nav__list" id="anchors">
-        {% if page.homepage_navigation %}
         <li class="site-nav__item">
           <a class="site-nav__link" href="/#overview">Overview</a>
         </li>
@@ -13,7 +12,12 @@
         <li class="site-nav__item">
           <a class="site-nav__link" href="/#integrations">Integrations</a>
         </li>
-        {% endif %}
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/case-studies">Case Studies</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="/quick-start-guides">Quickstart Guides</a>
+        </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="http://graphite.readthedocs.org/en/latest/" target="_blank">Docs</a>
         </li>
@@ -21,7 +25,7 @@
           <a class="site-nav__link" href="https://answers.launchpad.net/graphite" target="_blank">Support</a>
         </li>
       </ul>
-      <ul class="site-nav__actions">
+       <ul class="site-nav__actions">
         <!-- <li class="site-nav__item">
           <a class="site-nav__button btn btn--gradient" href="#">
             <span>Live Demo</span>
