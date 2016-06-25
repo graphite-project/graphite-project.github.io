@@ -28,7 +28,10 @@
 		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 		ga('create', '{{ site.trackingid }}', 'auto');
+		ga('require', 'eventTracker');
+		ga('require', 'outboundLinkTracker');
 		ga('send', 'pageview');
 
 	</script>
+	<script async src="{{ site.baseurl }}/js/libs/autotrack.js"></script>
 </head>
