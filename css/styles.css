@@ -1011,7 +1011,8 @@ pre {
 .case-study-logos .case-study__logo {
   display: block;
   margin: 0 auto;
-  height: 50px; }
+  max-width: 140px;
+  max-height: 50px; }
   @media (min-width: 35.9375rem) {
     .case-study-logos .case-study__logo {
       margin: 0; } }
