@@ -1215,7 +1215,7 @@ pre {
   margin: 0;
   font-size: 1.6875rem; }
 
-.banner-section--intro h3 + h3 {
+.banner-section--intro h3 + h3 +h3 {
   margin: 0 0 1.25rem; }
 
 .banner-section--intro h4 {
