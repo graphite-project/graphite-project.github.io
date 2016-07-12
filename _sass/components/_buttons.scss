@@ -73,6 +73,17 @@
   }
 }
 
+.btn--outline-primary {
+  border-color: $color-blue;
+  background: transparent;
+  color: $color-dark-blue;
+
+  &:hover {
+    background: $color-dark-blue;
+    color: $color-white;
+  }
+}
+
 .btn--outline-alt {
   border-color: $color-dark-green;
   background: transparent;
