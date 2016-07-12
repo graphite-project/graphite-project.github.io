@@ -31,7 +31,7 @@ $color-anakiwa:       #78e0ff;
 $color-aquamarine:    #6bc7e3;
 
 
-
+$border-radius: rem-calc(4);
 // Font-size scale (Based on http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/)
 // ---------------------------------------------------------------------------
 
@@ -54,4 +54,4 @@ $font-size-milli:     rem-calc(10);
 $bp-small: rem-calc(650);
 $bp-medium: rem-calc(992);
 $bp-large: rem-calc(1200);
-$bp-nav: rem-calc(960); // width used for nav menu breakpoints
+$bp-nav: rem-calc(970); // width used for nav menu breakpoints

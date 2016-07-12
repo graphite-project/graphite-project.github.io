@@ -18,8 +18,9 @@
 
 .btn--primary {
   @include font-smoothing;
-  border-color: $color-blue;
-  background: $color-blue;
+  border-color: #3dbfe4;
+  //background: $color-blue;
+  background: linear-gradient(to right, #40c3e3, #3dbfe4) no-repeat;
   color: $color-white;
 
   &:hover {

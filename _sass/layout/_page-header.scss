@@ -174,29 +174,40 @@
   @media (min-width: $bp-nav) {
     display: inline-block;
     margin-bottom: 0;
+    position: absolute;
+    right: 0;
   }
 }
 
 .site-nav__item {
   display: block;
-  padding: rem-calc(0 15);
+  padding: rem-calc(0 12); // was 0 15
 
   @media (min-width: $bp-nav) {
     display: inline-block;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    padding-right: 0;
   }
 }
 
 .site-nav__button.btn--primary {
 position: relative;
-top: rem-calc(-90);
-right: rem-calc(10px);
+@media (min-width: $bp-nav) {
+  top: rem-calc(-84);
+  right: rem-calc(-10);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  }
 }
 
 .site-nav__actions > .site-nav__item {
   padding: rem-calc(0 7);
 
   &:last-child {
-    //padding-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -219,13 +230,20 @@ right: rem-calc(10px);
 .smaller .site-nav__link {
   @media (min-width: $bp-nav) {
     display: block;
-    height: rem-calc(75);
+    height: rem-calc(62);
     padding-top: rem-calc(18);
     color: $color-white;
 
     &.active {
       border-bottom: 4px solid rgba($color-white, .8);
     }
+  }
+}
+
+.smaller .site-nav__item {
+  &:last-child {
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -247,15 +265,41 @@ right: rem-calc(10px);
   }
 }
 
+// .smaller .site-nav__button.btn--primary {
+//   position: relative;
+// top: 0;
+// right: 0;
+//   @include at-least(small) {
+//     border-color: $color-white;
+//     background: $color-white;
+//     color: $color-curious-blue;
+//     border-top-left-radius: $border-radius;
+//     border-top-right-radius: $border-radius;
+//     &:hover {
+//       @include font-smoothing;
+//       background: transparent;
+//       color: $color-white;
+//     }
+//   }
+// }
+
 .smaller .site-nav__button.btn--primary {
   position: relative;
-top: 0;
-right: 0;
+  top: 0;
+  right: 0;
+  @media (min-width: $bp-nav) {
+    top: rem-calc(-41);
+    line-height: 2.25;
+    right: 0;
+    height: rem-calc(36);
+    border: 1px solid $color-white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
   @include at-least(small) {
     border-color: $color-white;
     background: $color-white;
     color: $color-curious-blue;
-
     &:hover {
       @include font-smoothing;
       background: transparent;
