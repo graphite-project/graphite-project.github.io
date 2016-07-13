@@ -1154,6 +1154,11 @@ pre {
   .btn-group:last-child {
     margin: 0; }
 
+.footer-btn {
+  position: absolute;
+  right: 56px;
+  top: 120px; }
+
 .btn-group__item {
   display: block;
   margin-bottom: 1.25rem; }
