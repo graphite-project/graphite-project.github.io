@@ -52,7 +52,7 @@ echo ${METRIC_NAME} ${NUMBER_OF_WAYWARD_PROCS} ${TIMESTAMP} | nc ${CARBON_HOST} 
 
       <p>Tracking the performance of your application is a must. Without built-in telemetry, we're left to rely on low-level tracing tools. Thanks to tools like <a href="https://github.com/etsy/statsd">StatsD</a>, we can fire off asynchronous measurements from our apps without concern for blocking behavior or having to instrument our own collection and aggregation mechanisms.</p>
 
-      <p>Etsy released the original StatsD implementation <a href="https://codeascraft.com/2011/02/15/measure-anything-measure-everything/">back in 2011</a> as an open source metrics aggregator. Since then, a huge ecosystem of <a href="(https://github.com/etsy/statsd/wiki#client-implementations">language bindings</a> and <a href="https://github.com/etsy/statsd/wiki#server-implementations">competing server implementations</a> have grown up around it. With a few lines of code, anyone can instrument their application to fire off regular, non-blocking metrics to Graphite.</p>
+      <p>Etsy released the original StatsD implementation <a href="https://codeascraft.com/2011/02/15/measure-anything-measure-everything/">back in 2011</a> as an open source metrics aggregator. Since then, a huge ecosystem of <a href="https://github.com/etsy/statsd/wiki#client-implementations">language bindings</a> and <a href="https://github.com/etsy/statsd/wiki#server-implementations">competing server implementations</a> have grown up around it. With a few lines of code, anyone can instrument their application to fire off regular, non-blocking metrics to Graphite.</p>
 
       <pre>
 gem "statsd-ruby"
