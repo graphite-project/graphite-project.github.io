@@ -5,10 +5,10 @@
 
 .page {
   position: relative;
-  padding-top: rem-calc(101); // header height
+  padding-top: rem-calc(92); // header height
 
   @include at-least(small) {
-    padding-top: rem-calc(198); // header height
+    padding-top: rem-calc(184); // header height
   }
 
   &:before {
